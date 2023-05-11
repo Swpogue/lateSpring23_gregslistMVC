@@ -3,7 +3,7 @@ import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 import { loadState } from "./Utils/Store.js"
-
+import { House } from "./Models/House.js"
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState('values', [Value])
@@ -22,6 +22,37 @@ class AppState extends EventEmitter {
   activeCar = null
 
   userName = ''
+
+  houses = [
+    new House({
+      id: '',
+      creatorName: '',
+      year: '1974',
+      name: 'Mid-Century Modern Single Family Home',
+      bedrooms: 3,
+      bathrooms: 2.5,
+      sqft: 1400,
+      price: 375000,
+      description: 'Newly renovated mid-century modern home',
+      imgUrl: 'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg',
+    }),
+    new House({
+      creatorName: '',
+      year: '1984',
+      name: 'Modern Single Family Home',
+      bedrooms: 3,
+      bathrooms: 2,
+      sqft: 1200,
+      price: 350000,
+      description: 'Renovated modern home',
+      imgUrl: 'https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg',
+    }),
+
+  ]
+
+
+
+
 
 }
 

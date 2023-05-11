@@ -3,7 +3,7 @@ import { Pop } from '../Utils/Pop.js'
 
 export class UserController {
     constructor() {
-        console.log('hello from the user controller');
+        // console.log('hello from the user controller');
     }
 
     async enterUserName() {
